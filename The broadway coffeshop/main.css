@@ -1,0 +1,320 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+
+}
+
+.navbar span{
+    color:#dbc1ac;
+    font-size: 100%;
+    font-weight: bolder;
+}
+
+.nav-menu {
+    padding: 25px;
+    background-color: rgb(70, 70, 70);
+    margin-top: 10px;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    border: #685648 solid 2px;
+    border-radius: 2%;
+}
+
+.fas {
+    color: #dbc1ac;
+}
+
+.menu {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+}
+
+.menu:hover {
+    color: white;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all 0.4s;
+}
+
+.navbar-toggler {
+    outline: none!important;
+}
+
+header {
+    height: 100vh;
+    background: url(./img/coffee-shop\ copy.jpg) no-repeat center center/cover;
+
+}
+
+.banner {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.heading {
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+.main {
+    animation-name:slide;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#about {
+    background: black;
+    margin-top: 30px;
+    color: #dbc1ac;
+}
+
+.text {
+    font-size: 28px;
+}
+
+.about-images {
+    position: relative;
+}
+
+.about-img {
+    position: absolute;
+    width: 150px;
+    transition: all 2s ease;
+    opacity: 0.9;
+}
+
+.img-1 {
+    left: 0%;
+    top: 0%;
+}
+.img-2 {
+    left: 20%;
+    top: 20%;
+    z-index: 10;
+}
+.img-3 {
+    left: 40%;
+    top: 45%;
+    z-index: 20;
+}
+.img-4 {
+    left: 40%;
+    top: 0%;
+}
+.img-5 {
+    left: 0%;
+    top: 45%;
+}
+.about-img:hover {
+    outline-offset: 2px;
+    transform: scale(1.8) rotate(20deg);
+    z-index: 30;
+    opacity: 1;
+}
+.about-images:hover,
+.about-img:not(:hover) {
+    opacity: 0.5;
+}
+
+.btn {
+    color: #dbc1ac;
+    font-weight: bold;
+    border: 2px solid #5c3023;
+    font-size: 25px;
+}
+.hvr-right{
+    display: inline-block;
+    vertical-align: middle;
+    transition-duration: 0.5s;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0,0,0);
+    position: relative;
+    transition-property: color;
+}
+.hvr-right:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #dbc1ac;
+    transition-timing-function: ease-out;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+.hvr-right:hover, .hvr-right:focus,
+.hvr-right:active{
+    color: black;
+}
+.hvr-right:hover:before, .hvr-right:focus:before,
+ .hvr-right:active:before{
+     transition-timing-function: cubic-bezier(0.52, 1.64, 0.37,0.66);
+     transform: scaleX(1);
+ }
+ .menu1, .most-like{
+     position: relative;
+     margin-top: 25px;
+ }
+ .video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+ }
+ .bg-video{
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+ }
+.coffee-card{
+    position: relative;
+    box-shadow: 5px 15px 50px #685648;
+    max-width: 420px;
+    transition: all 0.8s;
+    overflow: hidden;
+    cursor: pointer;
+}
+.menu1 .card-header .title-text, .card-header .title-text {
+    color: black;
+    font-weight: bold;
+}
+.menu1 .card-footer, .card-footer{
+    color: black;
+    font-weight: bold;
+}
+.fast-order-text, .fast-order-text p{
+    color: #000000;
+}
+.rotate{
+    perspective: 100rem;
+}
+.back{
+    position: absolute;
+    top: -100%;
+    background: white;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transition: top 0.8s opacity 0.4s;
+}
+.text-color{
+    color: goldenrod;
+}
+.menu1 .text-color{
+    color: rgb(36, 36, 36);
+}
+.back-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.rotate:hover .coffee-card{
+    transform: rotateY(180deg);
+}
+.rotate:hover .back{
+    opacity: 1;
+    top: 0;
+    user-select: auto;
+    pointer-events: auto;
+}
+.back-content .btn{
+    color: #000000;
+}
+.fast-order{
+    background-position: bottom;
+    background-image: url(./img/Cafe-background-1.jpg);
+}
+.fast-order .form-group label, .contact .form-group label{
+    font-weight: bold;
+}
+.fast-order .form-group label:hover {
+    background-color: #dbc1ac;
+    border: black solid 1px;
+    padding: 5px;
+}
+.contact .form-group label:hover{
+    background-color: #dbc1ac;
+    color: black;
+    border: black solid 1px;
+    padding: 5px;
+}
+#fast-order .fast-order-text h2, #fast-order .fast-order-text h4{
+    color: #000000;
+    font-weight: bold;
+}
+.contact{
+    background: url(./img/wp2352819.jpg);
+}
+.contact .hp{
+    color: white;
+    font-weight: bold;
+    position: relative;
+    right: 20%;
+}
+.contact .form-group label{
+    color: white;
+}
+
+footer{
+    background: black;
+    padding-top: 2%;
+    margin-top: 15px;
+    position: relative;
+}
+.text-center h4{
+    color: #dbc1ac;
+}
+footer span{
+    padding: 0.3em 0.7em;
+    color: #dbc1ac;
+    transition: all 0.5s ease;
+}
+footer p{
+    color: #dbc1ac;
+    font-size: 20px;
+}
+footer .top a{
+    position: absolute;
+    right: 2%;
+    top: 69%;
+    color: #dbc1ac;
+    font-size: 20px;
+}
